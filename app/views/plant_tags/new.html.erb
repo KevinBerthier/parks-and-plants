@@ -1,0 +1,8 @@
+<h1>TAG YOUR PLANT</h1>
+
+<%= simple_form_for([@plant, @plant_tag]) do |f| %>
+  <%# f.association :tag  %>
+  <%# f.input :tag, collection: Tag.all %>
+  <%= f.input :tag, collection: Tag.all, input_html: { multiple: true, class: 'select2' }, include_hidden: false %>
+  <%= f.button :submit %>
+<% end %>
